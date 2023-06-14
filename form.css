@@ -1,0 +1,165 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.reg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background:  #333;
+}
+
+.registrationContainer{
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+.registrationContainer .title{
+  color:#333;
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+}
+
+.registrationContainer .title::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 30px;
+  background: #410957;
+  bottom: 0;
+}
+
+.registrationContainer form .user-details{
+   display: flex; 
+   flex-wrap: wrap; 
+   justify-content: space-between; 
+}
+
+form .user-details .input-box{
+  width: 210px;
+  margin: 20px 0 12px 0;
+}
+
+form .gender-details .gender-title{
+ color:#333;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+}
+
+form .gender-details .category{
+  width: 80%;
+  margin: 14px 0;
+  display: flex;
+   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gender-details .category label{
+  display: flex;
+ margin: 10px;
+  align-items: center;
+}
+
+.gender-details .category  .dot{
+  height: 18px;
+  width: 18px;
+  background-color: #410957;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+}
+
+#dot-1:checked~ .category label .one,
+#dot-2:checked~ .category label .two,
+#dot-3:checked~ .category label .three{
+  border-color: #333;
+  background: #ddd;
+}
+
+form input[type='radio']{
+  display: none;
+}
+
+.user-details .input-box .details{
+  margin-bottom: 5px;
+  display: block;
+  font-weight: 500;
+  color: #333;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.user-details .input-box input{
+height: 45px;
+ width: 100%; 
+outline: none;
+border-radius: 5px;
+padding-left: 10px;
+font-size: 1rem;
+border-bottom-width:4px ;
+transition: all 1s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid
+{
+  border-color:#410957 ;
+}
+form .button{
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  place-content: center;
+}
+
+form .button input{
+  height: 100%;
+  width: 80%;
+  outline: none;
+  background: #410957;
+  color: #ddd;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px #444;
+}
+
+form .button input:hover{
+  background: #444;
+  color: #410957;
+    box-shadow: 2px 2px 2px 1px #410957;
+}
+
+@media screen and (max-width:567px) {
+  .container{
+    max-width: 100%;
+  }
+ form .user-details .input-box{
+   width: 100%;
+   margin-bottom: 15px;
+ } 
+
+  .registrationContainer form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 0;
+  }
+}
+
